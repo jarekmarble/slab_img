@@ -1,8 +1,9 @@
 <section class="slabs-manager">
     <h3>Slabs</h3>
 
-    <?php foreach ($slabs as $slab) : ?>
-        <span><?php echo $this->escapeHtml($slab->SlabId . '-' .$slab->Container); ?></span>
-    <?php endforeach; ?>
-
+    <div class="slab-container">
+        <?php foreach ($slabs as $slab) : ?>
+            <span class="slab-rect"><?php echo $this->escapeHtml($slab->SlabId); ?></span>
+        <?php endforeach; ?>
+    </div>
 </section>

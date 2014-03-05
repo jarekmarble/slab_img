@@ -46,5 +46,8 @@ return array(
         'template_path_stack' => array(
             'slabs' => __DIR__ . '/../view',
         ),
+        'template_map' => array(
+            'layout/layout'  => __DIR__ . '/../view/layout/slabs-layout.phtml',
+        ),
     ),
 );

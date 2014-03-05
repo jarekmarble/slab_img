@@ -16,8 +16,8 @@ return array(
         'driver' => 'sqlsrv',
         'server' => '127.0.0.1',
         'database' => 'SlabImgDB',
-        'username' => 'sa',
-        'password' => '1qaz@WSX',
+        'username' => '',
+        'password' => '',
     ),
     'service_manager' => array(
         'factories' => array(

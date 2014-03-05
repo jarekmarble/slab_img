@@ -1,0 +1,15 @@
+span.slab-rect
+{
+    float: left;
+    height: 30px;
+    position: relative;
+    width: 60px;
+    margin: 5px;
+    border: #808080 solid 1px;
+}
+
+div.slab-container
+{
+    float: left;
+    position: relative;
+}

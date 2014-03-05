@@ -1,0 +1,8 @@
+<section class="slabs-manager">
+    <h3>Slabs</h3>
+
+    <?php foreach ($slabs as $slab) : ?>
+        <span><?php echo $this->escapeHtml($slab->SlabId . '-' .$slab->Container); ?></span>
+    <?php endforeach; ?>
+
+</section>

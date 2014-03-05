@@ -10,7 +10,19 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
-
 return array(
-    // ...
+    // db configuration needs to be overridden in local.php file
+    'db' => array(
+        'driver' => 'sqlsrv',
+        'server' => '127.0.0.1',
+        'database' => 'SlabImgDB',
+        'username' => 'sa',
+        'password' => '1qaz@WSX',
+    ),
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter'
+            => 'Zend\Db\Adapter\AdapterServiceFactory',
+        ),
+    ),
 );

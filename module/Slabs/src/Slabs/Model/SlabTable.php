@@ -30,4 +30,28 @@ class SlabTable
 
         return $resultSet;
     }
+
+    public function getSlab($id)
+    {
+        $id = (int)$id;
+        $rowSet = $this->tableGateway->select(array('Id' => $id));
+        $row = $rowSet->current();
+        if (!$row)
+        {
+            throw new \Exception("Could not find row $id");
+        }
+        return $row;
+    }
+
+    public function getSlabBySlabId($slabId)
+    {
+        // TODO: add unique constraint on DB
+        $slabId = (int)$slabId;
+        $rowSet = $this->tableGateway->select(array('SlabId' => $slabId));
+        $row = $rowSet->current();
+        if (!$row) {
+            throw new \Exception("Could not find row $slabId");
+        }
+        return $row;
+    }
 } 

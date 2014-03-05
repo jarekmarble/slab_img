@@ -16,7 +16,7 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        // redirect to images module default view
+        // redirect to slabs module default view
         $this->redirect()->toRoute('slabs');
     }
 }

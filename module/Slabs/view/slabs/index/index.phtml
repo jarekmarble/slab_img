@@ -1,9 +1,13 @@
-<section class="slabs-manager">
-    <h3>Slabs</h3>
-
+<section class="">
     <div class="slab-container">
         <?php foreach ($slabs as $slab) : ?>
-            <span class="slab-rect"><?php echo $this->escapeHtml($slab->SlabId); ?></span>
+            <span class="slab-rect slab-button" onclick="editSlab(<?= $slab->Id ?>)"><?php echo $this->escapeHtml($slab->SlabId); ?></span>
         <?php endforeach; ?>
     </div>
+
+    <script type="text/javascript">
+        function editSlab(id) {
+            window.location = '/slabs/slab-manager/edit/' + id;
+        }
+    </script>
 </section>

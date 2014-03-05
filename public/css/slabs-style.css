@@ -8,8 +8,15 @@ span.slab-rect
     border: #808080 solid 1px;
 }
 
+span.slab-button
+{
+    cursor: pointer;
+}
+
 div.slab-container
 {
     float: left;
+    padding: 100px 10px;
     position: relative;
 }
+

@@ -2,7 +2,9 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'Slabs\Controller\Index' => 'Slabs\Controller\IndexController'
+            'Slabs\Controller\Index' => 'Slabs\Controller\IndexController',
+            'Slabs\Controller\SlabManager' => 'Slabs\Controller\SlabManagerController',
+            'Slabs\Controller\PhotoManager' => 'Slabs\Controller\PhotoManagerController',
         ),
     ),
     'router' => array(
@@ -26,6 +28,20 @@ return array(
                     // as you solidify the routes for your module, however,
                     // you may want to remove it and replace it with more
                     // specific routes.
+                    'slab-manager' => array(
+                        'type' => 'Segment',
+                        'options' => array(
+                            'route' => '/slab-manager[/:action[/:id]]',
+                            'constraints' => array(
+                                'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                'id' => '[a-zA-Z0-9_-]*',
+                            ),
+                            'defaults' => array(
+                                'controller' => 'Slabs\Controller\SlabManager',
+                                'action' => 'index',
+                            ),
+                        ),
+                    ),
                     'default' => array(
                         'type'    => 'Segment',
                         'options' => array(
